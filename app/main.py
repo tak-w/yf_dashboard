@@ -13,5 +13,6 @@ try:
 except TypeError as e:
     print(f'ERROR: {e}')
 
-# print(dfs_dict)
 bq.load_data_to_bq(dfs_dict)
+bq.merge_temp_to_hist()
+print('Loading data from yfinance to BigQuery has successfully completed!')
